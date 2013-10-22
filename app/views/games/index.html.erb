@@ -1,2 +1,12 @@
 <h1>Welcome to the pretty cool casino.</h1>
 <p>Choose a game to get started!</p>
+
+<div style="float: left; width: 50%;">
+		<%= link_to image_tag("rps/scissors.jpeg", :class => 'menu-shrink'), :controller => "rps", :action => "new" %>
+
+		<h2>Rock Paper Scissors</h2>
+	</div>
+	<div style="float: right; width: 50%;">
+		<%= link_to image_tag("secret_numbers/2.jpeg"), :controller => "secret_numbers", :action => "new" %>
+		<h2>The Secret Number Game</h2>
+	</div>

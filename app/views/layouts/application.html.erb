@@ -7,8 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-Hello World.
-<%= yield %>
-
+<div class="score-bar">
+	<div style="float: left; padding-left: 10px; color: white;">
+		<p>Pretty Cool Casino v1</p>
+	</div>
+	<div style="float: right; padding-right: 10px; color: white;">
+		<p>Current Score: N/A</p>
+	</div>
+</div>
+	<div class="game-container">
+		<%= yield %>
+	</div>
 </body>
 </html>

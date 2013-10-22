@@ -11,3 +11,31 @@
  *= require_self
  *= require_tree .
  */
+
+body {
+	font-family: sans-serif;
+	margin: 0;
+}
+
+.game-container {
+	width: 75%; 
+	margin-left: auto; 
+	margin-right: auto; 
+	text-align: center;
+	margin-top:50px;
+}
+
+.score-bar {
+	height: 50px; 
+	background-color: darkblue;
+}
+
+.menu-shrink {
+	height: 75px;
+	width: auto;
+}
+
+.smaller-pug {
+	height: 200px;
+	width: auto;
+}

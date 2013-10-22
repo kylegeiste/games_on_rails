@@ -1,0 +1,12 @@
+<% if @secret_number == @chosen_number %>
+<%= image_tag("secret_numbers/right.jpeg", :class => 'smaller-pug') %><br />
+<h1>That's right. You're a genius.</h1>
+<% else %>
+<%= image_tag("secret_numbers/wrong.jpeg", :class => 'smaller-pug') %><br />
+<h1>Nope. Try again, pal.</h1>
+<% end %>
+
+<h2> You chose: <%= @chosen_number %>.</h2>
+<h2> The secret number was <%= @secret_number %>.</h2>
+
+<%= link_to "Try again?", secret_number_path("new") %>

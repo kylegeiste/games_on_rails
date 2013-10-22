@@ -1,0 +1,22 @@
+
+	<% score = 0 %>
+	<div style="float: left; width: 50%;">
+		<%= image_tag("rps/#{@player_throw}.jpeg") %>
+		<h2> you threw: </h2><h1><%= @player_throw %> </h1>
+	</div>
+	<div style="float: right; width: 50%;">
+		<%= image_tag("rps/#{@opponent_throw}.jpeg") %>
+		<h2> your opponent threw: </h2><h1><%= @opponent_throw %> </h1>
+	</div>
+	
+	<% if @player_throw == @opponent_throw %>
+		<h2>It's a tie! Boooooring.</h2>
+	<% elsif (@player_throw == 'rock' && @opponent_throw == 'paper') || (@player_throw == 'paper' && @opponent_throw == 'scissors') || (@player_throw == 'scissors' && @opponent_throw == 'rock') %>
+		<h2>You lose! Oh no!</h2>
+		<% score -= 1 %>
+	<% else %>
+		<h2>You win! Hot dog!</h2>
+		<% score += 1 %>
+	<%end%>
+
+ <%= link_to "Try again?", rp_path("new") %>

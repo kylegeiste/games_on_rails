@@ -3,6 +3,9 @@ GamesOnRails::Application.routes.draw do
 #look at the games controller for index
   root 'games#index'
 
+  resources :secret_numbers, :only => [:new, :show]
+  resources :rps, :only => [:new, :show]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

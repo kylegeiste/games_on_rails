@@ -1,0 +1,13 @@
+<h1>Welcome to Rock Paper Scissors</h1>
+
+<p>To play, just pick a throw. If your throw beats the computer's throw, you win.</p>
+
+<br/>
+
+<h2>Pick a throw:</h2>
+
+<%= link_to(image_tag("rps/rock.jpeg"), rp_path("rock")) %>
+<%= link_to(image_tag("rps/paper.jpeg"), rp_path("paper")) %>
+<%= link_to(image_tag("rps/scissors.jpeg"), rp_path("scissors")) %>
+<br /><br />
+<%= link_to "Play a different game?", :controller => "games", :action => "index" %>
